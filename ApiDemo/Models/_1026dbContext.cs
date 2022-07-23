@@ -1,4 +1,5 @@
 ﻿using System;
+using ApiDemo.Models.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -19,6 +20,7 @@ namespace ApiDemo.models
 
         public virtual DbSet<Dept> Depts { get; set; }
         public virtual DbSet<Emp> Emps { get; set; }
+        public virtual DbSet<EmpDept> EmpDepts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

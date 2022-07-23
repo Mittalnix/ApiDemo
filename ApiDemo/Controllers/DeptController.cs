@@ -1,4 +1,5 @@
 ﻿using ApiDemo.models;
+using ApiDemo.Models.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -88,6 +89,13 @@ namespace ApiDemo.Controllers
             con.Depts.Remove(data);
             con.SaveChanges();
             return Ok("record deleted");
+        }
+        [HttpGet]
+        [Route("ShowEmp")]
+        public IActionResult GetEmp()
+        {
+            var data = con.EmpDepts.FromSqlInterpolated<EmpDept>($"ShowEmp");
+            return Ok(data);
         }
 
     }
