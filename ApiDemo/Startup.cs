@@ -27,7 +27,7 @@ namespace ApiDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<_1026dbContext>(item => item.UseSqlServer("server=.\\sqlexpress;database=1026db;Trusted_Connection=true"));
+            services.AddDbContext<_1026dbContext>(item => item.UseSqlServer("server=.\\sqlexpress;database=ShoppingDb;Trusted_Connection=true"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -55,7 +55,7 @@ namespace ApiDemo.models
             {
                 entity.ToTable("emp");
 
-                entity.HasIndex(e => e.Email, "UQ__emp__AB6E61642F96EE18")
+                entity.HasIndex(e => e.Email, "UQ__emp__AB6E6164957A02D5")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("ID");
